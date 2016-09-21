@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     char v='*';//Border Character
     char c;    //Character used to create C
     char s;    //Character used to create S
-    char l;    //Character L used to create exclamamtion
+    char l;    //Character L used to create exclamation
     
     //Input values
     cout<<"What characters would you like to use to make the CS, input\n";
@@ -35,18 +35,19 @@ int main(int argc, char** argv) {
     //Display Output
     cout<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<endl;
     cout<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<endl;
-    cout<<v<<v<<c<<c<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<endl;
-    cout<<v<<c<<v<<v<<c<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<endl;
-    cout<<c<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<endl;
-    cout<<c<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<endl;
-    cout<<c<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
-    cout<<c<<a<<a<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
-    cout<<c<<a<<a<<a<<a<<a<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
-    cout<<a<<c<<a<<a<<c<<a<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
-    cout<<a<<a<<c<<c<<a<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
-    cout<<a<<a<<a<<a<<a<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
-    cout<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a;
-    cout<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v;
+    cout<<a<<a<<c<<c<<a<<a<<a<<a<<s<<s<<s<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<a<<c<<a<<a<<c<<a<<a<<s<<a<<a<<a<<s<<a<<l<<a<<l<<a<<endl;
+    cout<<c<<a<<a<<a<<a<<a<<a<<s<<a<<a<<a<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<c<<a<<a<<a<<a<<a<<a<<s<<a<<a<<a<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<c<<a<<a<<a<<a<<a<<a<<a<<s<<a<<a<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<c<<a<<a<<a<<a<<a<<a<<a<<a<<s<<s<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<c<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<s<<a<<a<<a<<a<<a<<endl;
+    cout<<a<<c<<a<<a<<c<<a<<a<<s<<a<<a<<a<<s<<a<<a<<a<<a<<a<<endl;
+    cout<<a<<a<<c<<c<<a<<a<<a<<a<<s<<s<<s<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<l<<a<<l<<a<<endl;
+    cout<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<a<<endl;
+    cout<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<v<<endl;
+    cout<<"Computer Science is cool"<<endl;
     //Exit Program
     return 0;
 }
