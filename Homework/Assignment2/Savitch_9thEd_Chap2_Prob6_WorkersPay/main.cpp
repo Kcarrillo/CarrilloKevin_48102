@@ -7,6 +7,7 @@
 
 //System Libraries
 #include <iostream>   //Input/Output objects
+#include <iomanip>    //Formatting
 using namespace std;  //Name-space used in the System Library
 
 //User Libraries
@@ -22,37 +23,34 @@ int main(int argc, char** argv) {
     float ssctax=6e-2;      //Social Security Tax
     float fedtax=1.4e-1;    //Federal income Tax
     float stTax=5e-2;       //State income Tax
-    char utax=10;           //Union tax per week
-    char depend=35;         //$35 tax for more than 2 dependants 
-    char numdep;            //Number of dependants
-    float overtime,totgros,takehme; //Total overtime hours, gross pay, and take home pay
-    char hrwork;            //Amount of hours worked 
+    unsigned short utax=10;           //Union tax per week
+    short depend=35;         //$35 tax for more than 2 dependants 
+    short numdep;            //Number of dependants
+    float overtime,totgros,takehme; //Total overtime hours, gross pay, and take home pay, if charged for dependants new take home
+    short hrwork;            //Amount of hours worked 
     //Input values
     cout<<"Input the number of hours worked, and the number of Dependants"<<endl;
     cin>>hrwork>>numdep;
-    
-    
-    
-   
-            
+          
     //Process values -> Map inputs to Outputs
-    takehme=totgros-(totgros*ssctax)-(totgros*fedtax)-(totgros*stTax)-utax;
-    
     totgros=payrte*hrwork;
-    
-    
-    
+    takehme=totgros-ssctax*totgros-fedtax*totgros-stTax*totgros-utax;
+  
     {
     if (hrwork > 40) totgros = payrte * 40 + 1.5 * payrte * (hrwork - 40);
     else totgros = payrte * hrwork; 
     }
     {
-    if (numdep <= 3)  cout<<"No additional charge for dependants";
-    else cout<<"Charge for dependants "<<depend<<endl;  
+    if (numdep < 3)  cout<<"No additional charge for dependants"<<endl;
+    else takehme=totgros-ssctax*totgros-fedtax*totgros-stTax*totgros-utax-depend;
     }
     
+    
     //Display Output
-
+    cout<<setprecision(2)<<fixed<<showpoint;
+    cout<<"Total amount of money made for the week $ "<<totgros<<endl;
+    cout<<"Amount of money taken home for the week $ "<<takehme<<endl;
+    
     //Exit Program
     return 0;
 }
