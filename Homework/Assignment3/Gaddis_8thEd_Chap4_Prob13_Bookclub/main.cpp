@@ -25,8 +25,8 @@ int main(int argc, char** argv) {
    cin>>book;
    
     //Process values -> Map inputs to Outputs
-    points=(book=0)?"0":
-           (book=1)?"5":
+    bookok=0)'0':
+           (book=1)?'5':
            (book=2)?"15":    
            (book=3)?"30":
            (book=4)?"60":"60";
