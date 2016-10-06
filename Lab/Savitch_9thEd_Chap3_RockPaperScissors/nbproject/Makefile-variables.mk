@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
-CND_ARTIFACT_NAME_Debug=c__template
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/c__template
+CND_ARTIFACT_NAME_Debug=savitch_9thed_chap3_rockpaperscissors
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/savitch_9thed_chap3_rockpaperscissors
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
-CND_PACKAGE_NAME_Debug=c++template.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/c++template.tar
+CND_PACKAGE_NAME_Debug=savitch9thedchap3rockpaperscissors.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/savitch9thedchap3rockpaperscissors.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
-CND_ARTIFACT_NAME_Release=c__template
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/c__template
+CND_ARTIFACT_NAME_Release=savitch_9thed_chap3_rockpaperscissors
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/savitch_9thed_chap3_rockpaperscissors
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
-CND_PACKAGE_NAME_Release=c++template.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/c++template.tar
+CND_PACKAGE_NAME_Release=savitch9thedchap3rockpaperscissors.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/savitch9thedchap3rockpaperscissors.tar
 #
 # include compiler specific variables
 #

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=C++Template
+PROJECTNAME=Savitch_9thEd_Chap3_RockPaperScissors
 
 # Active Configuration
 DEFAULTCONF=Debug
