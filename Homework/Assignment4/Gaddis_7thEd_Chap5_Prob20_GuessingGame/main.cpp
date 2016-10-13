@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Kevin Carrillo
  * Created on October 13, 2016, 11:27 AM
- * Purpose:  Hello World Template
+ * Purpose:  Guessing Game: Guess the number
  */
 
 //System Libraries Here
