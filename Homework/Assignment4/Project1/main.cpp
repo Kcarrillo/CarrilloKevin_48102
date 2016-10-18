@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
         cout<<"7.  Type 7  for Gaddis 8thEd Chap5 Prob7 Penny Pay"<<endl;
         cout<<"8.  Type 8  for Gaddis 8thEd Chap5 Prob3 Ocean Levels"<<endl;
         cout<<"9.  Type 9  for Gaddis 8thEd Chap5 Prob22 Square Display"<<endl;
-        cout<<"10. Type 10 for Problem J"<<endl;
+        cout<<"10. Type 10 for Gaddis 8thEd Chap5 Prob1 Sum of Numbers"<<endl;
         cin>>menuItm;
 
         //Go to the Problem
@@ -318,9 +318,24 @@ int main(int argc, char** argv) {
             }
     case 10:{
         cout<<"Inside Problem J"<<endl;
+                  //Declaration of Variables
+                int num=0;
+                int sum=0;
+
                 //Input values
-                //Process values -> Map inputs to Outputs 
-                //Display Output
+                cout<<"Input any number."<<endl;
+                cin>>num;
+
+                //Process values -> Map inputs to Outputs
+                while (num<0){
+                    cout<<"Please enter any POSITIVE number.\n";
+                    cin>>num;
+                }
+
+                for(int n=1;n<=num;n++){
+                    sum +=n;
+                }
+                cout<<"The sum of all the digits preceding, and including your input is "<<sum<<endl;
                 break;
             }//End Case
         }//End the Switch/Case
