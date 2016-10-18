@@ -1,42 +1,39 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
- * Created on July 19, 2016, 9:07 AM
- * Purpose:  To calculate the calories burned
+ * Author: Kevin Carrillo
+ * Created on October 11, 2016, 11:25 AM
+ * Purpose:  
  */
 
 //System Libraries Here
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 //User Libraries Here
 
-//Global Constants Only
-
+//Global Constants Only, No Global Variables
+//Like PI, e, Gravity, or conversions
 
 //Function Prototypes Here
 
 //Program Execution Begins Here
 int main(int argc, char** argv) {
     //Declare all Variables Here
-      //Minutes on treadmill
-    float calburn=3.6;  //calories burned
-    int min;
-    float cal;
+    float calpmin=3.6f;    //calories burned per minute
+    float calburn;         //calories burned
+    
     //Input or initialize values Here
     
     //Process/Calculations Here
-    while (min==30){
-        cal=((min/5)*calburn);
     
-    break;  
+    for(float minutes=5; minutes<=30;minutes+=5){
+        calburn=minutes*calpmin;
+        cout<<"In "<<minutes<<" minutes, you have burned "<<calburn<<" calories.\n";
     }
+    
     //Output Located Here
-    cout<<fixed<<showpoint<<setprecision(2);
-    cout<<"Calories burned "<<cal<<endl;
+    
 
     //Exit
     return 0;
 }
-
