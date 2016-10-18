@@ -41,10 +41,10 @@ int main(int argc, char** argv) {
         cout<<"3.  Type 3  for Gaddis 8thEd Chap5 Prob4 Calories Burned"<<endl;
         cout<<"4.  Type 4  for Gaddis 7thEd Chap5 Prob20 Guessing Game"<<endl;
         cout<<"5.  Type 5  for Gaddis 8thEd Chap5 Prob6 Distance"<<endl;
-        cout<<"6.  Type 6  for Problem F"<<endl;
-        cout<<"7.  Type 7  for Problem G"<<endl;
-        cout<<"8.  Type 8  for Problem H"<<endl;
-        cout<<"9.  Type 9  for Problem I"<<endl;
+        cout<<"6.  Type 6  for Gaddis 8thEd Chap5 Prob9 Hotel Occupancy"<<endl;
+        cout<<"7.  Type 7  for Gaddis 8thEd Chap5 Prob7 Penny Pay"<<endl;
+        cout<<"8.  Type 8  for Gaddis 8thEd Chap5 Prob3 Ocean Levels"<<endl;
+        cout<<"9.  Type 9  for Gaddis 8thEd Chap5 Prob22 Square Display"<<endl;
         cout<<"10. Type 10 for Problem J"<<endl;
         cin>>menuItm;
 
@@ -189,36 +189,135 @@ int main(int argc, char** argv) {
      
                 break;
             }
-            case 6:{
-                cout<<"Inside Problem F"<<endl;
-                //Input values
-                //Process values -> Map inputs to Outputs 
-                //Display Output
+    case 6:{
+        cout<<"Inside Problem F"<<endl;
+                //Declare Variables
+            int floors;//How many floors
+            int rooms;//How many rooms
+            int occup_rooms;//How many occupied rooms
+            int totrms=0;
+            int totocc=0;
+            int totempt=0;
+            int empty;
+            float rmsOcc;
+
+            //Get the floors
+            cout<<"How many floors does the hotel have? ";
+            cin>>floors;
+
+            //Display each floor
+            for (int floor = 1; floor <= floors; floor++)
+            {
+
+                //Get a positive floors
+                if (floors < 1)
+                cout<<"Please enter a bigger number  \n";
+                else if (floors==13)
+                    continue;
+
+                //Get the room for each floor
+                cout<<"How many rooms on a floor "<<floor<<" ?";
+                cin>>rooms;
+
+                //Get a positive rooms
+                while (rooms < 10)
+                {
+                cout<<"Please enter a number bigger than 10\n";
+                break;
+                }
+
+                //Get the occupied rooms
+                cout<<"How many rooms are occupied on floor "<<floor<<" ?";
+                cin>>occup_rooms;
+
+                // Calculate the number of total rooms on this floor.
+                totrms += rooms;
+
+                // Calculate the number of total occupied on this floor.
+                totocc += occup_rooms;
+
+                // Calculate the number of empty rooms on this floor.
+                empty = rooms - occup_rooms;
+
+                // Calculate the number of total empty on this floor.
+                totempt += empty; 
+            }
+
+            cout<<"---------------------------------------\n";
+            cout<<"The hotel has "<<totrms<<"total rooms "<<" ."<<endl;
+
+            cout<<"The hotel has total occupied rooms "<<totocc<<" ."<<endl;
+
+            cout<<"The hotel has a total of "<<totempt<<" unoccupied rooms "<<" ."<<endl;
+
+            rmsOcc= static_cast<float>(totocc) / totrms;
+
+            cout<<"The percentage of rooms that are occupied is "<< (rmsOcc * 100) <<"%"<<" ."<<endl;
+
                 break;
             }
-            case 7:{
-                cout<<"Inside Problem G"<<endl;
+    case 7:{
+        cout<<"Inside Problem G"<<endl;
+            //Declaration of Variables
+            int numDays=1;            //number of days
+            float money=1.0;          //number of pennies
+            float total=0.0;          //total amount of money earned
+            float dayPay=0.0;         //amount of money earned in dollars
+
+            //Input values
+            cout<<"Input the number of days"<<endl;
+            cin>>numDays;
+            while (numDays<1){
+                cout<<"The number of days CANNOT be negative or less than ZERO"<<endl;
+                cin>>numDays;
+            }
+            for(int days=1;days<=numDays;days++){
+                dayPay=money/100;
+                cout<<setprecision(2)<<fixed<<showpoint<<"Day "<<days<<" you earned $"<<dayPay<<"\n";
+                total+=dayPay;
+                money*=2;
+            }
+            cout<<"Total earnings are $"<<total<<endl;
+
+           break;
+            }
+    case 8:{
+        cout<<"Inside Problem H"<<endl;
+                //Declaration of Variables
+                float level=0;       //ocean level
+                float years=25;      //number of years
+
+
                 //Input values
-                //Process values -> Map inputs to Outputs 
-                //Display Output
+
+
+                //Process values -> Map inputs to Outputs
+                for(float year=1;year<=years;year++){
+                    level+=1.5;
+                    cout<<"year "<<year<<": "<<level<<" mm"<<endl;
+                }
                 break;
             }
-            case 8:{
-                cout<<"Inside Problem H"<<endl;
+    case 9:{
+        cout<<"Inside Problem I"<<endl;
+                //Declaration of Variables
+                int sSize=0;
+
                 //Input values
-                //Process values -> Map inputs to Outputs 
-                //Display Output
+                cout<<"Enter a number between 1 and 15"<<endl;
+                cin>>sSize;
+
+                //Process values -> Map inputs to Outputs
+                for(int row=1;row<=sSize;row++){
+                    for(int column=1;column<=sSize;column++){
+                        cout<<"X ";
+                    }
+                    cout<<endl;
+                }
                 break;
             }
-            case 9:{
-                cout<<"Inside Problem I"<<endl;
-                //Input values
-                //Process values -> Map inputs to Outputs 
-                //Display Output
-                break;
-            }
-            case 10:{
-                cout<<"Inside Problem J"<<endl;
+    case 10:{
+        cout<<"Inside Problem J"<<endl;
                 //Input values
                 //Process values -> Map inputs to Outputs 
                 //Display Output
