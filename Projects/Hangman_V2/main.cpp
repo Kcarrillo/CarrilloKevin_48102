@@ -7,10 +7,8 @@
 
 //System Libraries
 #include <iostream>   //Input/Output objects
-#include <string>     //Strings  
-#include <iomanip>    //Formating
-#include <fstream>    //File I/O  
-
+#include <string>
+#include <iomanip>
 using namespace std;  //Name-space used in the System Library
 
 //User Libraries
@@ -18,18 +16,15 @@ using namespace std;  //Name-space used in the System Library
 //Global Constants
 
 //Function prototypes
-void gmeinfo();
-void gmeruls();
-void playgme();
-void hghscre();
+void problem1();
+void problem2();
+void problem3();
 
 
 //Execution Begins Here!
 int main() {
     //Declaration of Variables
     int menuItm;    //Choice from menu
-   //New Version
-    cout<<"WELCOME to the NEW Version of Hangman!"<<endl;
    
     //Loop until users exits
     do{
@@ -38,28 +33,23 @@ int main() {
         cout<<"1.  Type 1  for More Information"<<endl;
         cout<<"2.  Type 2  for the Rules"<<endl;
         cout<<"3.  Type 3  to Play the Game"<<endl;
-        cout<<"4.  Type 4  for Highscores"<<endl;
         
         cin>>menuItm;
 
         //Go to the Problem
         switch(menuItm){
-            case 1:gmeinfo();break;
-            case 2:gmeruls();break;
-            case 3:playgme();
+            case 1:problem1();break;
+            case 2:problem2();break;
+            case 3:problem3();
         }//End the Switch/Case
-    }while(menuItm>0&&menuItm<=4);//Ends the Do-While Loop
+    }while(menuItm>0&&menuItm<=3);//Ends the Do-While Loop
 
     //Exit Program
     return 0;
 }
 
-void gmeinfo(){
+void problem1(){
     cout<<"         More Info: "<<endl;
-    cout<<"         New Features: "<<endl;
-    cout<<"Now includes Computer Opponent, randomly selected pre-implemented words. \n";
-    cout<<"Now keeps a high score and track of player score. \n";
-    cout<<"         Old info: "<<endl;
     cout<<"Technically 2 players are required to play the game. \n";
     cout<<"I thought it would be more fun to have an actual person choose the word which creates more difficulty. \n";
     cout<<"Yes, I could have made a menu to allow the user to choose a difficulty and a have it randomize a list of words. \n";
@@ -67,7 +57,7 @@ void gmeinfo(){
     cout<<"Enjoy. \n";
 }
 
-void gmeruls(){
+void problem2(){
     cout<<setw(38)<<endl;
     cout<<"!The Rules!"<<endl;
     cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
@@ -77,23 +67,11 @@ void gmeruls(){
     cout<<"     4.)If guess is correct no tries are used."<<endl;
     cout<<"     5.)After all tries, Player loses."<<endl;
     cout<<"     6.)GAME IS CASE SENSITIVE."<<endl;
-    cout<<"     7.)New Mode: A word is selected randomly by computer."<<endl;
     cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 }
 
-void playgme(){
-   // Menu item
-    int mnuitem;
-    //Choose PvP or PvAI
-    do{
-        //Prompt PvP or PvC
-        cout<<"Would you like to play against another player or have a word generated?"<<endl;
-        cout<<"1.) PvP: Another Player types in a word. \n";
-        cout<<"2.) PvC: A word from a list is randomly selected{Difficulty Varies}. \n";
-        
-        cin>>mnuitem;
-        
-    }
+void problem3(){
+
     cout<<"!!Let The Games Begin!!"<<endl;
    //Declare Variables
      string word;       
@@ -233,8 +211,5 @@ void playgme(){
     }
     
     cout << endl;
-  }   
-}
-void hghscre(){
-    
+  }
 }
