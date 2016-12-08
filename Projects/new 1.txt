@@ -1,0 +1,16 @@
+//Dictionary for hang man
+dad
+japan
+america
+germany
+hiroshima
+nagasaki
+pearl harbor
+world trade center
+berlin
+normandy
+nasa
+space
+uranus
+tyrannosaurus
+meme

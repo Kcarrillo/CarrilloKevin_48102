@@ -22,6 +22,8 @@ void gmeinfo();
 void gmeruls();
 void playgme();
 void hghscre();
+void PvP();
+void PvC();
 
 
 //Execution Begins Here!
@@ -37,8 +39,9 @@ int main() {
         //Prompt for problem for user input
         cout<<"1.  Type 1  for More Information"<<endl;
         cout<<"2.  Type 2  for the Rules"<<endl;
-        cout<<"3.  Type 3  to Play the Game"<<endl;
-        cout<<"4.  Type 4  for Highscores"<<endl;
+        cout<<"3.  Type 3  to Play against computer"<<endl;
+        cout<<"4.  Type 4  to Play against another player"<<endl;
+        cout<<"5.  Type 5 for High scores"<<endl;
         
         cin>>menuItm;
 
@@ -46,9 +49,11 @@ int main() {
         switch(menuItm){
             case 1:gmeinfo();break;
             case 2:gmeruls();break;
-            case 3:playgme();
+            case 3:PvC();break;
+            case 4:PvP();break;
+            case 5:hghscre();break;
         }//End the Switch/Case
-    }while(menuItm>0&&menuItm<=4);//Ends the Do-While Loop
+    }while(menuItm>0&&menuItm<=5);//Ends the Do-While Loop
 
     //Exit Program
     return 0;
@@ -81,20 +86,9 @@ void gmeruls(){
     cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
 }
 
-void playgme(){
-   // Menu item
-    int mnuitem;
-    //Choose PvP or PvAI
-    do{
-        //Prompt PvP or PvC
-        cout<<"Would you like to play against another player or have a word generated?"<<endl;
-        cout<<"1.) PvP: Another Player types in a word. \n";
-        cout<<"2.) PvC: A word from a list is randomly selected{Difficulty Varies}. \n";
-        
-        cin>>mnuitem;
-        
-    }
-    cout<<"!!Let The Games Begin!!"<<endl;
+void PvP(){
+
+cout<<"!!Let The Games Begin!!"<<endl;
    //Declare Variables
      string word;       
        int wrong=0;
@@ -203,7 +197,7 @@ void playgme(){
                 
 
         cout << undrScr << endl;
-        cout << "There are " << word.length() << " letters with spaces" << endl;
+        cout << "There are " << word.length() << " letters " << endl;
         cout << "You have " << 6 - wrong << " more tries left" << endl;
     
         if(undrScr == word){
@@ -234,6 +228,9 @@ void playgme(){
     
     cout << endl;
   }   
+}
+void PvC(){
+    
 }
 void hghscre(){
     
